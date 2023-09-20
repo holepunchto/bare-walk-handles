@@ -12,7 +12,7 @@ npm i bare-walk-handles
 const walkHandles = require('bare-walk-handles')
 
 for (const handle of walkHandles()) {
-  if (handle.type === walkHandles.constants.UV_TIMER) {
+  if (handle.type === walkHandles.constants.TIMER) {
     console.log('timer', handle)
   }
 }

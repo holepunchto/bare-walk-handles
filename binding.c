@@ -95,31 +95,16 @@ init (js_env_t *env, js_value_t *exports) {
   err = js_set_named_property(env, exports, "constants", constants);
   assert(err == 0);
 
-#define V(name) \
+#define V(name, msg) \
   { \
     js_value_t *val; \
-    err = js_create_uint32(env, name, &val); \
+    err = js_create_int32(env, UV_##name, &val); \
     assert(err == 0); \
     err = js_set_named_property(env, constants, #name, val); \
+    assert(err == 0); \
   }
 
-  V(UV_ASYNC)
-  V(UV_CHECK)
-  V(UV_FS_EVENT)
-  V(UV_FS_POLL)
-  V(UV_HANDLE)
-  V(UV_IDLE)
-  V(UV_NAMED_PIPE)
-  V(UV_POLL)
-  V(UV_PREPARE)
-  V(UV_PROCESS)
-  V(UV_STREAM)
-  V(UV_TCP)
-  V(UV_TIMER)
-  V(UV_TTY)
-  V(UV_UDP)
-  V(UV_SIGNAL)
-  V(UV_FILE)
+  UV_HANDLE_TYPE_MAP(V);
 #undef V
 
   return exports;
