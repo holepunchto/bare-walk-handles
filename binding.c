@@ -20,6 +20,13 @@ on_bare_walk_handle (uv_handle_t *handle, void *data) {
   err = js_create_object(env, &result);
   assert(err == 0);
 
+  js_value_t *address;
+  err = js_create_bigint_uint64(env, (uintptr_t) handle, &address);
+  assert(err == 0);
+
+  err = js_set_named_property(env, result, "address", address);
+  assert(err == 0);
+
 #define V(name, value) \
   { \
     js_value_t *val; \
