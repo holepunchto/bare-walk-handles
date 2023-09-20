@@ -1,0 +1,30 @@
+{
+  "name": "bare-walk-handles",
+  "version": "1.0.0",
+  "description": "Walk the event loop handles of the Bare process",
+  "main": "index.js",
+  "files": [
+    "index.js",
+    "binding.c",
+    "binding.js",
+    "CMakeLists.txt",
+    "prebuilds"
+  ],
+  "scripts": {
+    "test": "standard && bare test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/holepunchto/bare-walk-handles.git"
+  },
+  "author": "Holepunch",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/holepunchto/bare-walk-handles/issues"
+  },
+  "homepage": "https://github.com/holepunchto/bare-walk-handles#readme",
+  "devDependencies": {
+    "brittle": "^3.2.1",
+    "standard": "^17.0.0"
+  }
+}
