@@ -7,7 +7,7 @@ include(bare)
 add_bare_module(bare_walk_handles)
 
 target_sources(
-  bare_walk_handles
+  ${bare_walk_handles}
   PRIVATE
     binding.c
 )
