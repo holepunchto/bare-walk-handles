@@ -26,6 +26,7 @@
   "homepage": "https://github.com/holepunchto/bare-walk-handles#readme",
   "devDependencies": {
     "brittle": "^3.2.1",
+    "cmake-bare": "^1.1.7",
     "standard": "^17.0.0"
   }
 }
