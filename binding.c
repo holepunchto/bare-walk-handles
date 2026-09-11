@@ -9,7 +9,7 @@ typedef struct {
 } bare_handle_walk_t;
 
 static void
-bare_walk_handles__on_handle (uv_handle_t *handle, void *data) {
+bare_walk_handles__on_handle(uv_handle_t *handle, void *data) {
   int err;
 
   bare_handle_walk_t *walk = (bare_handle_walk_t *) data;
@@ -50,7 +50,7 @@ bare_walk_handles__on_handle (uv_handle_t *handle, void *data) {
 }
 
 static js_value_t *
-bare_walk_handles (js_env_t *env, js_callback_info_t *info) {
+bare_walk_handles(js_env_t *env, js_callback_info_t *info) {
   int err;
 
   size_t argc = 1;
@@ -73,7 +73,7 @@ bare_walk_handles (js_env_t *env, js_callback_info_t *info) {
 }
 
 static js_value_t *
-bare_walk_handles_exports (js_env_t *env, js_value_t *exports) {
+bare_walk_handles_exports(js_env_t *env, js_value_t *exports) {
   int err;
 
 #define V(name, fn) \

@@ -8,7 +8,7 @@ npm i bare-walk-handles
 
 ## Usage
 
-``` js
+```js
 const walkHandles = require('bare-walk-handles')
 
 for (const handle of walkHandles()) {
